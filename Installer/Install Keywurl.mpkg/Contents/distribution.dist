@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.apple.PackageMaker" authoringToolVersion="3.0.3" authoringToolBuild="174">
+    <title>Keywurl</title>
+    <options customize="allow" allow-external-scripts="no" rootVolumeOnly="true"/>
+    <script>
+function pm_s4leop_selected() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4leop_hidden() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; !(system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4leop_enabled() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4leop_startSelected() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4leop_startEnabled() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4leop_startHidden() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.5.1');
+  result = result &amp;&amp; !(system.files.fileExistsAtPath('/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_selected() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_hidden() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; !(system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_enabled() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_startSelected() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_startEnabled() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s4tig_startHidden() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; !(system.files.fileExistsAtPath(my.target.mountpoint + '/Applications/Safari.app') == true);
+  return result;
+}
+
+
+function pm_s3leop_selected() {
+  result = true;
+  result = result &amp;&amp; (choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3leop_hidden() {
+  result = true;
+  result = result &amp;&amp; !(choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3leop_enabled() {
+  result = true;
+  result = result &amp;&amp; (choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3leop_startSelected() {
+  result = true;
+  result = result &amp;&amp; (choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3leop_startEnabled() {
+  result = true;
+  result = result &amp;&amp; (choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3leop_startHidden() {
+  result = true;
+  result = result &amp;&amp; !(choices.s4leop.s4leopProperty == false);
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.5.1');
+  return result;
+}
+
+
+function pm_s3tig_selected() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (choices.s4tig.s4tigProperty == false);
+  return result;
+}
+
+
+function pm_s3tig_hidden() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; !(choices.s4tig.s4tigProperty == false);
+  return result;
+}
+
+
+function pm_s3tig_enabled() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (choices.s4tig.s4tigProperty == false);
+  return result;
+}
+
+
+function pm_s3tig_startSelected() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (choices.s4tig.s4tigProperty == false);
+  return result;
+}
+
+
+function pm_s3tig_startEnabled() {
+  result = true;
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; (my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; (choices.s4tig.s4tigProperty == false);
+  return result;
+}
+
+
+function pm_s3tig_startHidden() {
+  result = true;
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion >= '10.4.1');
+  result = result &amp;&amp; !(my.target.systemVersion.ProductVersion &lt;= '10.5.1');
+  result = result &amp;&amp; !(choices.s4tig.s4tigProperty == false);
+  return result;
+}</script>
+    <choices-outline>
+        <line choice="s4leop"/>
+        <line choice="s4tig"/>
+        <line choice="s3leop"/>
+        <line choice="s3tig"/>
+    </choices-outline>
+    <choice id="s4leop" title="Keywurl for Safari 4 on Leopard" start_selected="pm_s4leop_startSelected()" start_enabled="pm_s4leop_startEnabled()" start_visible="!pm_s4leop_startHidden()" selected="pm_s4leop_selected()" enabled="pm_s4leop_enabled()" visible="!pm_s4leop_hidden()">
+        <pkg-ref id="net.purefiction.keywurl.keywurl.pkg"/>
+    </choice>
+    <choice id="s4tig" title="Keywurl for Safari 4 on Tiger" start_selected="pm_s4tig_startSelected()" start_enabled="pm_s4tig_startEnabled()" start_visible="!pm_s4tig_startHidden()" selected="pm_s4tig_selected()" enabled="pm_s4tig_enabled()" visible="!pm_s4tig_hidden()">
+        <pkg-ref id="net.purefiction.keywurl.keywurl.pkg"/>
+    </choice>
+    <choice id="s3leop" title="Keywurl for Safari 3 on Leopard" start_selected="pm_s3leop_startSelected()" start_enabled="pm_s3leop_startEnabled()" start_visible="!pm_s3leop_startHidden()" selected="pm_s3leop_selected()" enabled="pm_s3leop_enabled()" visible="!pm_s3leop_hidden()">
+        <pkg-ref id="net.purefiction.keywurl.keywurl-1.pkg"/>
+    </choice>
+    <choice id="s3tig" title="Keywurl for Safari 3 on Tiger" start_selected="pm_s3tig_startSelected()" start_enabled="pm_s3tig_startEnabled()" start_visible="!pm_s3tig_startHidden()" selected="pm_s3tig_selected()" enabled="pm_s3tig_enabled()" visible="!pm_s3tig_hidden()">
+        <pkg-ref id="net.purefiction.keywurl.keywurl-2.pkg"/>
+    </choice>
+    <pkg-ref id="net.purefiction.keywurl.keywurl.pkg" installKBytes="276" version="1.4.0" auth="Root">file:./Contents/Packages/keywurl.pkg</pkg-ref>
+    <pkg-ref id="net.purefiction.keywurl.keywurl.pkg" installKBytes="276" version="1.4.0" auth="Root">file:./Contents/Packages/keywurl.pkg</pkg-ref>
+    <pkg-ref id="net.purefiction.keywurl.keywurl-1.pkg" installKBytes="276" version="1" auth="Root">file:./Contents/Packages/keywurl-1.pkg</pkg-ref>
+    <pkg-ref id="net.purefiction.keywurl.keywurl-2.pkg" installKBytes="276" version="1" auth="Root">file:./Contents/Packages/keywurl-2.pkg</pkg-ref>
+</installer-script>
